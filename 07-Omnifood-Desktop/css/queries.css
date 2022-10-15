@@ -1,0 +1,328 @@
+/* 
+rem and em do not depend on html font size in 
+  media queries.
+  Instead 1rem = 1 em = 16px
+*/
+
+/**********************/
+/* BELOW 1344px (Smaller Desktops) */
+/**********************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem !important;
+  }
+  .heading-primary {
+    font-size: 4.4rem !important;
+  }
+  .galery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .testimonials {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/**********************/
+/* BELOW 1200px (Tablets) */
+/**********************/
+@media (max-width: 75em) {
+  html {
+    /*Percentage of user browser font size*/
+    font-size: 56.25% !important;
+  }
+  .grid {
+    column-gap: 4.8rem !important;
+    row-gap: 6.4rem !important;
+  }
+  .heading-tertiary {
+    font-size: 3.6rem !important;
+  }
+  .heading-secondary {
+    font-size: 3.6rem !important;
+  }
+  .testimonials-container {
+    padding: 9.6rem 3.2rem !important;
+  }
+
+  .header {
+    padding: 0 3.2rem !important;
+  }
+  .hero {
+    gap: 4.8rem !important;
+  }
+  .main-nav-list {
+    gap: 3.2rem !important;
+  }
+}
+
+/**********************/
+/* BELOW 975px (Tablets) */
+/**********************/
+@media (max-width: 61em) {
+  html {
+    /*Percentage of user browser font size*/
+    font-size: 50% !important;
+  }
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 6.4rem !important;
+  }
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center !important;
+  }
+  .delivered-meals {
+    justify-content: center !important;
+    margin-top: 3.2rem !important;
+  }
+  .hero-img {
+    width: 60% !important;
+  }
+
+  .logos img {
+    height: 2.4rem !important;
+  }
+
+  .step-number {
+    font-size: 7.4rem !important;
+  }
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem !important;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr !important;
+  }
+
+  .galery {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr !important;
+  }
+  .cta-form {
+    grid-template-columns: 1fr !important;
+  }
+  .btn-form {
+    margin-top: 1.2rem !important;
+  }
+
+  .btn-mobile-nav {
+    display: block !important;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: translateX(100%) !important;
+
+    transition: all 0.5s ease-in !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  .nav-open .main-nav {
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateX(0%) !important;
+  }
+
+  .main-nav-list {
+    flex-direction: column !important;
+    gap: 4.8rem !important;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem !important;
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+}
+
+/**********************/
+/* BELOW 704px (Smaller Tablets) */
+/**********************/
+@media (max-width: 47em) {
+  .grid--3--cols,
+  .grid--4--cols {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem !important;
+  }
+
+  .grid--2--cols,
+  .grid--3--cols,
+  .grid--4--cols {
+    grid-template-columns: 1fr !important;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem !important;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0 !important;
+  }
+
+  .pricing-plan {
+    width: 100%;
+    justify-self: center !important;
+  }
+
+  .hero {
+    padding: 0 3.2rem !important;
+  }
+
+  .hero-img {
+    width: 80% !important;
+  }
+
+  .logos img {
+    height: 1.2rem !important;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1 !important;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5 !important;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem) !important;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr !important;
+  }
+
+  .galery {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+
+  .cta {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem !important;
+  }
+
+  .cta-img-box {
+    height: 32rem !important;
+    grid-row: 1 !important;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************/
+/* Fixing Safari flexbox gap */
+/**************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}

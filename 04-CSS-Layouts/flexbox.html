@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .el {
+        /*flex-basis: 200px; width*/
+        /*flex-shrink: 0;*/
+        /*flex-grow: 1;*/
+        /*flex: 0 1 150px;*/
+        flex: 1;
+      }
+      .el--1 {
+        background-color: purple;
+        /*order:3;*/
+        /*flex-grow:1;*/
+      }
+      .el--2 {
+        background-color: orangered;
+      }
+      .el--3 {
+        background-color: green;
+      }
+      .el--4 {
+        background-color: goldenrod;
+      }
+      .el--5 {
+        background-color: palevioletred;
+      }
+      .el--6 {
+        background-color: steelblue;
+      }
+
+      .container {
+        /* STARTER */
+        height: 200px;
+        font-family: sans-serif;
+        background-color: #ddd;
+        font-size: 40px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        justify-content: center;
+        /*gap: 30px;*/
+        /* FLEXBOX */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el el--1">HTML</div>
+      <div class="el el--2">and</div>
+      <div class="el el--3">CSS</div>
+      <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <div class="el el--6">languages</div>
+    </div>
+  </body>
+</html>
